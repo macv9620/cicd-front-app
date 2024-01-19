@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:602346291561:task-definition/forest-app-task-definition:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:602346291561:task-definition/forest-app-task-definition:2",
     "containerDefinitions": [
         {
             "name": "forest-app-front-container",
@@ -43,7 +43,7 @@
     "taskRoleArn": "arn:aws:iam::602346291561:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::602346291561:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 2,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
