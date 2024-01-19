@@ -35,7 +35,7 @@ env:
   ECR_REPOSITORY: macv9620/forest-app-repository # set this to your Amazon ECR repository name
   ECS_SERVICE: forest-app-service-ecs # set this to your Amazon ECS service name
   ECS_CLUSTER: forest-app-cluster # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: forest-app-task-definition.json # set this to the path to your Amazon ECS task definition
+  ECS_TASK_DEFINITION: .github/workflows/forest-app-task-definition.json # set this to the path to your Amazon ECS task definition
     # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: forest-app-front-container
 
