@@ -1,6 +1,6 @@
 
 # Step 1: Choose a base image
-FROM node:17-alpine
+FROM node:17-alpine as builder
 
 # Step 2: Set the working directory where docker will run the commands, docker creates the directory if it doesn't exist
 WORKDIR /app
@@ -15,8 +15,10 @@ RUN npm install
 
 COPY . .
 
-# Step 5: Build the project
+# Step 5: Build the project with vite
 RUN npm run build
 
 # Step 7: Define the startup command
-CMD ["npm", "start"]
+FROM nginx
+EXPOSE 80
+COPY --from=builder /app/dist /usr/share/nginx/html
