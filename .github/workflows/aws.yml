@@ -74,7 +74,7 @@ jobs:
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
           # aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/l8x0d6p9
-          # docker build -t macv9620/forest-app-repository .
+          # docker build -t macv9620/forest-app-repository . PRUEBA
           # docker tag macv9620/forest-app-repository:latest public.ecr.aws/l8x0d6p9/macv9620/forest-app-repository:latest
           # docker push public.ecr.aws/l8x0d6p9/macv9620/forest-app-repository:latest
           # echo "image=public.ecr.aws/l8x0d6p9/macv9620/forest-app-repository:latest" >> $GITHUB_OUTPUT
